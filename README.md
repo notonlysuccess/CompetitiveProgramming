@@ -1,3 +1,3 @@
 # CompetitiveProgramming
-Algorithm of Competitive Programming
-first submit
+Algorithm of Competitive Programming  
+set user
