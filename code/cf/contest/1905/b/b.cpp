@@ -39,12 +39,26 @@ ll mod_div(ll a, ll b, ll m) {a = a % m; b = b % m; return (mod_mul(a, mminvprim
 
 const int MAXN = 2e5+2;
 int n, m, k;
-int a[MAXN];
+int degree[MAXN];
 void solve();
 int main() {
   int T; cin >> T; while (T--) solve();
 }
 
 void solve() {
-
+  cin >> n;
+  memset(degree, 0, sizeof(degree));
+  for (int i = 1; i < n; i ++) {
+    int u, v;
+    cin >> u >> v;
+    degree[u] ++;
+    degree[v] ++;
+  }
+  int cnt = 0;
+  for (int i = 1; i <= n; i ++) {
+    if (degree[i] == 1) {
+      cnt++;
+    }
+  }
+  cout << (cnt + 1) / 2 << endl;
 }
